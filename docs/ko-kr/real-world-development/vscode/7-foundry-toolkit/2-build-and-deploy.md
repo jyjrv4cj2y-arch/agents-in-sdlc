@@ -57,7 +57,7 @@ lastUpdated: 2026-09-16
 2. 새 채팅이 **AIAgentExpert**로 전환되는지 확인합니다. 생성된 프롬프트를 다음의 사용자 지정 프롬프트로 바꾸고 전송합니다.
 
    ```text
-   /foundrytk-quick-start Create a backer concierge AI agent called 'Backer Concierge'. The agent should use the model I deployed to answer catalog questions and recommend games grounded strictly in db/catalog.json. Review the acceptance criteria in the issue titled 'Add a Backer Concierge assistant for catalog questions' and ensure the agent meets them. Generate the code into agent/backer-concierge in the current workspace and ask me if anything is unclear.
+   /foundrytk-quick-start 'Backer Concierge'라는 후원자 안내 AI 에이전트를 만듭니다. 내가 배포한 모델을 사용하여 카탈로그 질문에 답하고 db/catalog.json만을 근거로 게임을 추천해야 합니다. 'Add a Backer Concierge assistant for catalog questions' 이슈의 수락 기준을 검토하고 에이전트가 이를 충족하는지 확인합니다. 현재 작업 영역의 agent/backer-concierge에 코드를 생성하고 명확하지 않은 점이 있으면 질문합니다.
    ```
 
 3. `agent/backer-concierge`에 생성된 코드를 검토합니다. 배포 가능한 에이전트에 카탈로그가 포함되어 있고, 관련 테스트를 통과했으며, 자격 증명이나 로컬 환경 파일이 커밋되지 않을지 확인합니다.
@@ -74,7 +74,7 @@ lastUpdated: 2026-09-16
 1. 에이전트를 생성한 Copilot Chat에서 **Go production**을 선택하고 기본 프롬프트를 다음 내용으로 바꾼 뒤 전송합니다.
 
    ```text
-   /foundrytk-quick-start Review this agent for deployment readiness, run its tests, then deploy it to my existing tailspin-toys Foundry project. Show me the deployment status and test the deployed agent.
+   /foundrytk-quick-start 이 에이전트의 배포 준비 상태를 검토하고 테스트를 실행한 다음 기존 tailspin-toys Foundry 프로젝트에 배포합니다. 배포 상태를 보여 주고 배포된 에이전트를 테스트합니다.
    ```
 
    ![AIAgentExpert 에이전트의 핸드오프 옵션을 보여 주는 스크린샷.](../../../../_images/vscode-go-production-handoff.png)

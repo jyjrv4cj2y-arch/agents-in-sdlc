@@ -46,7 +46,7 @@ Tailspin Toys 후원자는 카테고리와 퍼블리셔로 게임을 필터링�
 8. 이슈에 연결된 이 워크트리 세션의 프롬프트 상자에서 기본 `/fix-issue` 프롬프트를 다음으로 바꿉니다.
 
    ```plaintext
-   Install the project dependencies, seed the database, then run the existing db:export script. Show me the command output and summarize the shape and grounding limits of db/catalog.json.
+   프로젝트 종속성을 설치하고 데이터베이스에 시드 데이터를 입력한 다음 기존 db:export 스크립트를 실행합니다. 명령 출력을 보여 주고 db/catalog.json의 구조와 그라운딩 범위를 요약합니다.
    ```
 
 9. 명령 출력을 검토합니다. Copilot은 다음과 같은 명령을 실행해야 합니다.
@@ -92,7 +92,7 @@ Tailspin Toys 후원자는 카테고리와 퍼블리셔로 게임을 필터링�
 13. 동일한 이슈 세션에서 다음을 입력합니다.
 
     ```plaintext
-    Use the Microsoft Foundry skill to create a resource group named rg-tailspin-toys and a Foundry project named tailspin-toys.
+    Microsoft Foundry 스킬을 사용하여 rg-tailspin-toys라는 리소스 그룹과 tailspin-toys라는 Foundry 프로젝트를 만듭니다.
     ```
 
     ![Foundry 프로젝트 생성](../../../../_images/app-8-foundry-project-created.png)
@@ -100,7 +100,7 @@ Tailspin Toys 후원자는 카테고리와 퍼블리셔로 게임을 필터링�
 14. Copilot에 모델을 추천하도록 요청합니다. 이슈에서 시작한 세션이므로 이슈의 승인 기준이 이미 컨텍스트에 포함되어 있습니다.
 
     ```plaintext
-    Use the Microsoft Foundry skill to recommend two or three current chat models in the tailspin-toys project that meet this issue's acceptance criteria. Explain the tradeoffs and wait for me to choose.
+    Microsoft Foundry 스킬을 사용하여 tailspin-toys 프로젝트에서 이 이슈의 수락 기준을 충족하는 최신 채팅 모델 두세 개를 추천합니다. 각 모델의 장단점을 설명한 뒤 내가 선택할 때까지 기다립니다.
     ```
 
 15. Copilot이 `microsoft-foundry` 스킬을 로드하는지 확인한 다음, 장단점을 고려하여 사용 가능한 모델을 선택합니다. Microsoft Foundry 호스팅 에이전트 빠른 시작에서는 현재 `gpt-5.4-mini`를 사용하지만, 가용성과 할당량은 지역에 따라 다릅니다.
@@ -110,7 +110,7 @@ Tailspin Toys 후원자는 카테고리와 퍼블리셔로 게임을 필터링�
 16. Copilot에 선택한 모델을 배포하도록 요청하고, 승인하기 전에 대상 프로젝트와 비용을 검토합니다.
 
     ```plaintext
-    Deploy the model I selected to the tailspin-toys Foundry project, using the model name as the deployment name.
+    내가 선택한 모델을 tailspin-toys Foundry 프로젝트에 배포하고 모델 이름을 배포 이름으로 사용합니다.
     ```
 
 > [!TIP]

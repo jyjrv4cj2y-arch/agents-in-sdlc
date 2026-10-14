@@ -67,7 +67,7 @@ Space Quiz를 만들기 전에 필요한 사항을 확인하고, GitHub Copilot 
 채팅에서 다음 프롬프트를 보냅니다.
 
 ```plaintext
-How does the GitHub Copilot app use worktrees?
+GitHub Copilot app은 워크트리를 어떻게 사용하나요?
 ```
 
 ## 요약 및 다음 단계

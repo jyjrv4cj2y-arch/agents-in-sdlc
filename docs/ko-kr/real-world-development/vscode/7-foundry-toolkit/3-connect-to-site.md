@@ -39,14 +39,14 @@ next: false
 1. Copilot에 프록시 생성을 요청합니다.
 
    ```text
-   Add a local Azure Functions proxy in api for the static Astro site to call my deployed Backer Concierge securely during development. Use my existing local Azure sign-in to call the hosted agent, keep all credentials out of the browser, protect conversation state with opaque handles, validate requests, sanitize errors, add focused tests, and configure the Astro dev server so /api requests reach the local Function. Don't create public deployment infrastructure.
+   정적 Astro 사이트가 개발 중에 배포된 Backer Concierge를 안전하게 호출할 수 있도록 api에 로컬 Azure Functions 프록시를 추가합니다. 기존 로컬 Azure 로그인을 사용해 호스팅 에이전트를 호출하고, 브라우저에 자격 증명을 노출하지 않으며, 불투명 핸들로 대화 상태를 보호합니다. 요청을 검증하고 오류에서 민감 정보를 제거하며 관련 테스트를 추가하고, Astro 개발 서버의 /api 요청이 로컬 Function에 도달하도록 구성합니다. 공개 배포 인프라는 만들지 않습니다.
    ```
 
 2. 변경 사항을 수락하기 전에 검토합니다. 자격 증명과 Foundry 대화 식별자를 서버에 유지하고, 로컬 설정을 버전 관리에서 제외하며, 요청에 제한을 적용하고, 관련 테스트를 통과했는지 확인합니다.
 3. UI를 만들기 전에 백엔드가 작동함을 입증합니다.
 
    ```text
-   Start the local Functions host and test /api/concierge by asking "Which games are under $30?" Show me the sanitized response and confirm that no credentials or internal conversation identifiers are returned.
+   로컬 Functions 호스트를 시작하고 /api/concierge에 "30달러 미만인 게임은 무엇인가요?"라고 요청하여 테스트합니다. 민감 정보를 제거한 응답을 보여 주고 자격 증명이나 내부 대화 식별자가 반환되지 않는지 확인합니다.
    ```
 
 4. 터미널의 응답을 확인합니다. 답변을 담은 `response` 속성이 있는 유효한 JSON이어야 하며, 지어낸 가격 정보나 자격 증명, 내부 대화 식별자가 없어야 합니다. 점검에 실패하면 Copilot에 수정을 요청하고 백엔드 테스트를 반복합니다.
@@ -59,7 +59,7 @@ next: false
 1. Copilot에 위젯 추가를 요청합니다.
 
    ```text
-   Add an accessible Backer Concierge chat widget to the Astro site. Connect it to /api/concierge, preserve the conversation using the returned opaque handle, follow the existing design guidance, support keyboard use, and make it testable.
+   Astro 사이트에 접근성 있는 Backer Concierge 채팅 위젯을 추가합니다. /api/concierge에 연결하고 반환된 불투명 핸들로 대화를 이어가며 기존 디자인 지침을 따르고 키보드 사용을 지원하며 테스트할 수 있게 만듭니다.
    ```
 
    ![Backer Concierge 채팅 위젯이 동작하는 모습을 보여 주는 스크린샷](../../../../_images/tailspin-toys-backer-concierge-agent.png)
@@ -67,7 +67,7 @@ next: false
 2. Function과 사이트를 계속 실행한 상태에서 전체 사용자 경험을 검증합니다.
 
    ```text
-   Use Playwright MCP to test the Backer Concierge widget end to end. Verify the core chat flow, conversation continuity, keyboard and accessibility behavior, grounding boundaries, and safe use of the local proxy. Report the results and fix any failures.
+   Playwright MCP를 사용하여 Backer Concierge 위젯을 엔드투엔드로 테스트합니다. 기본 채팅 흐름, 대화 연속성, 키보드 및 접근성 동작, 그라운딩 범위, 로컬 프록시의 안전한 사용을 검증합니다. 결과를 보고하고 실패한 항목을 수정합니다.
    ```
 
 3. 이슈의 수락 기준에 따라 테스트 결과와 변경 사항을 검토합니다. 근거에 기반한 답변, 모금액을 지어내지 않는 동작, 명확히 하기 위한 질문 하나, 접근성 있는 UI, 엔드투엔드 테스트가 기준입니다. 실패한 부분을 수정하고 관련 점검을 다시 실행했는지 확인합니다.

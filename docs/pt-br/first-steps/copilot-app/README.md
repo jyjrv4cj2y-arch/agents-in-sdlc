@@ -9,7 +9,7 @@ lastUpdated: 2026-10-12
 
 Faça um tour prático pelo aplicativo GitHub Copilot, pensado para quem está começando. Você criará um Space Quiz colorido a partir de uma pasta vazia e percorrerá todo o ciclo de desenvolvimento, do primeiro prompt a um pull request revisado e a um site publicado no GitHub Pages.
 
-O workshop leva aproximadamente de 60 a 90 minutos. O projeto usa um único arquivo HTML, sem dependências de tempo de execução, para que você possa se concentrar em conhecer o aplicativo e seus fluxos de trabalho com agentes.
+O workshop leva aproximadamente de 60 a 90 minutos. O projeto usa um único arquivo de linguagem de marcação de hipertexto (HTML), sem dependências de tempo de execução, para que você possa se concentrar em conhecer o aplicativo e seus fluxos de trabalho com agentes.
 
 > [!NOTE]
 > Este workshop foi criado por [James Montemagno][james] e adaptado de [First Steps with GitHub Copilot][source-lab]. O conteúdo original está disponível sob a [licença MIT][source-license].

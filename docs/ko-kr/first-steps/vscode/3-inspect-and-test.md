@@ -27,7 +27,7 @@ VS Code는 Copilot Chat 입력란의 오른쪽 아래에 활성 컨텍스트를 
 리포지토리를 초기화하거나 커밋하기 전에 통합 브라우저와 스모크 테스트 프롬프트를 사용합니다.
 
 ```plaintext
-Run a browser-level smoke test for the quiz. Check keyboard navigation, score updates, correct and incorrect feedback, and the results screen. Fix any failures, then report what passed.
+퀴즈의 브라우저 수준 스모크 테스트를 실행합니다. 키보드 탐색, 점수 업데이트, 정답 및 오답 피드백, 결과 화면을 확인합니다. 실패 항목을 수정한 다음 통과한 항목을 보고합니다.
 ```
 
 1. 스모크 테스트를 실행하고 통합 브라우저를 확인합니다.

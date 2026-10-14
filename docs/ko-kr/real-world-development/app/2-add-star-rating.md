@@ -36,7 +36,7 @@ Tailspin Toys의 각 게임에는 별점이 있을 수 있으며, 별점은 이�
 4. 프롬프트 상자 아래에서 **new working tree**와 **Interactive** 모드를 선택합니다. 다음 프롬프트로 변경을 요청합니다.
 
     ```plaintext
-    Show each game's starRating out of 5 in the game cards on the list page. If the rating is null, show "No rating yet". Keep the card layout as it is, add tests, and run the relevant checks.
+    목록 페이지의 게임 카드마다 5점 만점의 starRating을 표시합니다. 평점이 null이면 "No rating yet"를 표시합니다. 카드 레이아웃은 그대로 유지하고 테스트를 추가한 다음 관련 검사를 실행합니다.
     ```
 
 5. <kbd>Enter</kbd>를 눌러 Copilot에 프롬프트를 보냅니다.
@@ -80,7 +80,7 @@ AI가 생성한 모든 변경 내용은 작더라도 병합하기 전에 검토�
 1. 다음 프롬프트로 Copilot에 앱을 시작하고 브라우저 캔버스에서 페이지를 열도록 요청합니다.
 
     ```plaintext
-    Start the app and open it in the browser canvas.
+    앱을 시작하고 브라우저 캔버스에서 엽니다.
     ```
 
 2. 잠시 후 앱이 시작되고 Copilot app 안에 브라우저 창이 열립니다.
@@ -88,7 +88,7 @@ AI가 생성한 모든 변경 내용은 작더라도 병합하기 전에 검토�
 4. 완료하면 다음 프롬프트로 이 세션에서 시작한 개발 서버를 중지하도록 Copilot에 요청합니다.
 
     ```plaintext
-    Stop the dev server and close the browser canvas.
+    개발 서버를 중지하고 브라우저 캔버스를 닫습니다.
     ```
 
 ## 첫 번째 끌어오기 요청 열기 및 병합

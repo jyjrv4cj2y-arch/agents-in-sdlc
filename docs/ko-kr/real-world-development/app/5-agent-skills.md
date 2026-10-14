@@ -46,7 +46,7 @@ Tailspin Toys 팀이 단위 테스트, 린트, 타입 검사 실행을 위해 �
 2. 다음 프롬프트로 스킬을 호출합니다.
 
     ```plaintext
-    Run the quality-checks skill for unit tests, lint, and type checks.
+    quality-checks 스킬을 실행하여 단위 테스트, 린트, 타입 검사를 수행합니다.
     ```
 
 3. 마지막에 표시되는 보고서를 확인합니다.
@@ -60,9 +60,9 @@ Tailspin Toys 팀이 단위 테스트, 린트, 타입 검사 실행을 위해 �
 3. 파일 끝에 다음 섹션을 추가합니다.
 
     ```markdown
-    ## Results output formatting
+    ## 결과 출력 형식
 
-    Upon completion, report each command that ran and whether it passed, failed, or was blocked. Include test counts, durations, errors, warnings, and other metrics only when the tool reports them. Identify the next action for any failure or blocker, and never describe a skipped or incomplete check as passed.
+    완료 후 실행한 각 명령과 통과, 실패, 차단 여부를 보고합니다. 테스트 수, 소요 시간, 오류, 경고, 기타 메트릭은 도구가 보고한 경우에만 포함합니다. 실패 또는 차단 항목에 필요한 다음 조치를 밝히고 건너뛰었거나 완료되지 않은 검사를 통과로 설명하지 않습니다.
     ```
 
 파일이 자동으로 저장됩니다.
@@ -75,7 +75,7 @@ Tailspin Toys 팀이 단위 테스트, 린트, 타입 검사 실행을 위해 �
 2. 다음 프롬프트로 스킬을 호출합니다.
 
     ```plaintext
-    Run the quality-checks skill for unit tests, lint, and type checks.
+    quality-checks 스킬을 실행하여 단위 테스트, 린트, 타입 검사를 수행합니다.
     ```
 
 3. 마지막에 표시되는 보고서를 확인합니다.

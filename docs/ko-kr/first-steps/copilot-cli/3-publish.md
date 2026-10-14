@@ -19,7 +19,7 @@ lastUpdated: 2026-09-28
 다음 프롬프트를 보냅니다.
 
 ```plaintext
-Initialize this folder as a Git repository, create an initial commit, and create a new public GitHub repository named space-quiz in my account. Push the current branch and set it as the default branch.
+이 폴더를 Git 리포지토리로 초기화하고 첫 커밋을 만든 다음, 내 계정에 space-quiz라는 공개 GitHub 리포지토리를 만듭니다. 현재 브랜치를 푸시하고 기본 브랜치로 설정합니다.
 ```
 
 에이전트가 요청할 때마다 각 Git 및 GitHub 작업을 승인합니다.

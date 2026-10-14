@@ -11,7 +11,7 @@ lastUpdated: 2026-09-28
 모든 워크숍에서 빈 폴더로 시작하여 동일한 Space Quiz를 만듭니다. 배우고 싶은 도구를 선택하거나, 여러 워크숍을 완료하여 도구별 작업 방식을 비교할 수 있습니다.
 
 > [!NOTE]
-> 이 워크숍은 [James Montemagno][james]가 만들었으며, [MIT License][source-license]로 제공하는 [First Steps with GitHub Copilot][source-lab]을 바탕으로 구성했습니다.
+> 이 워크숍은 [James Montemagno][james]가 만들었으며, [MIT License][source-license]에 따라 제공되는 [First Steps with GitHub Copilot][source-lab]을 바탕으로 구성했습니다.
 
 ## 워크숍
 

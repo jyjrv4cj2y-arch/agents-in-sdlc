@@ -14,7 +14,7 @@ Comece com uma experiência guiada e objetiva que apresenta os principais recurs
 
 ### [Tour pelo aplicativo GitHub Copilot][first-steps-app]
 
-Crie um Space Quiz a partir de uma pasta vazia, publique-o no GitHub, implemente um problema, conclua uma revisão do Copilot, agende uma automação e explore um fluxo de trabalho com Canvas.
+Crie um Space Quiz a partir de uma pasta vazia, publique-o no GitHub, implemente uma issue, conclua uma revisão do Copilot, agende uma automação, explore um fluxo de trabalho com Canvas e publique o site no GitHub Pages.
 
 ### [Primeiros passos com o GitHub Copilot CLI][first-steps-cli]
 
@@ -40,4 +40,4 @@ Escolha entre o GitHub Copilot CLI, o aplicativo GitHub Copilot, o agente de nuv
 [first-steps-app]: first-steps/copilot-app/
 [first-steps-cli]: first-steps/copilot-cli/
 [first-steps-vscode]: first-steps/vscode/
-[real-world-development]: ../real-world-development/
+[real-world-development]: real-world-development/

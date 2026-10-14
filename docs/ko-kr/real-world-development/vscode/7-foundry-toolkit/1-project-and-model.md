@@ -42,7 +42,7 @@ Tailspin 후원자는 신뢰할 수 있는 추천을 원합니다. 퍼즐 게임
 5. **Agent** 모드로 새 Copilot Chat을 열고 다음과 같이 요청합니다.
 
    ```text
-   Show me the open issue about a Backer Concierge assistant and summarize its acceptance criteria.
+   Backer Concierge 도우미와 관련된 열린 이슈를 찾아 수락 기준을 요약해 주세요.
    ```
 
 6. Copilot이 **Add a Backer Concierge assistant for catalog questions** 이슈를 표시하는지 확인합니다. 수락 기준은 근거에 기반한 답변, 모금액을 지어내지 않는 동작, 명확히 하기 위한 질문 하나, 엔드투엔드 테스트를 갖춘 접근성 있는 UI를 요구합니다.
@@ -81,13 +81,13 @@ Tailspin 후원자는 신뢰할 수 있는 추천을 원합니다. 퍼즐 게임
 1. Copilot Chat에서 **+**, **GitHub Issues**를 차례로 선택하고 **Add a Backer Concierge assistant for catalog questions**를 첨부합니다. 다음 프롬프트를 보냅니다.
 
    ```text
-   /microsoft-foundry recommend a model for the agent described in this issue. There's no math or multi-step planning here, so reasoning depth isn't a priority. Prioritize speed instead. Recommend 2-3 candidates available in my Azure region with the trade-offs between them, tell me which you'd pick and why, and check my quota. Avoid deprecated & older models according to the model retirement schedule
+   /microsoft-foundry 이슈에 설명된 에이전트에 적합한 모델을 추천합니다. 수학이나 여러 단계의 계획이 필요하지 않으므로 추론 깊이는 우선순위가 아닙니다. 대신 속도를 우선합니다. 내 Azure 지역에서 사용할 수 있는 후보 2~3개와 장단점을 추천하고, 가장 적합한 모델과 그 이유를 설명하며 할당량도 확인합니다. 모델 지원 종료 일정에 따라 사용 중단 예정이거나 오래된 모델은 제외합니다.
    ```
 
 2. 추천 내용을 읽고 요구 사항과 사용 가능한 할당량에 가장 적합한 모델을 선택합니다. Copilot에 배포를 요청합니다.
 
    ```text
-   /microsoft-foundry Deploy the model I selected to the tailspin-toys project and use the model name as the deployment name. Confirm the available quota and capacity with me before creating it.
+   /microsoft-foundry 내가 선택한 모델을 tailspin-toys 프로젝트에 배포하고 모델 이름을 배포 이름으로 사용합니다. 배포를 만들기 전에 사용 가능한 할당량과 용량을 확인합니다.
    ```
 
 3. 승인하기 전에 프로젝트, 배포, 용량, 비용을 확인합니다. 범위를 검토한 결과 적절하다면 이 세션에 대해 **Allow az …**를 선택하여 반복되는 요청을 줄입니다.
@@ -102,7 +102,7 @@ Model Playground에는 카탈로그 파일이 없습니다. 시스템 프롬프�
 1. **Models**에서 배포한 모델 이름을 선택하여 해당 모델이 미리 지정된 **Model Playground**를 엽니다. 다음 시스템 프롬프트를 붙여 넣습니다.
 
    ```text
-   You're the Backer Concierge for Tailspin Toys. Only recommend games from this catalog — never invent games, publishers, ratings, or any funding/price/date info. If a request is vague, ask one short question first.
+   Tailspin Toys의 Backer Concierge입니다. 이 카탈로그에 있는 게임만 추천하고 게임, 배급사, 평점, 모금액, 가격, 날짜 정보를 지어내지 않습니다. 요청이 모호하면 먼저 짧은 질문 하나를 합니다.
 
    CATALOG
 
@@ -119,12 +119,12 @@ Model Playground에는 카탈로그 파일이 없습니다. 시스템 프롬프�
    | Code Quest Odyssey | Adventure | CodeForge Studios | 4.8 |
    ```
 
-2. `I love puzzle games about tracking down bugs. What should I back?`로 그라운딩을 테스트합니다. 목록에 있는 실제 게임을 정확한 정보와 함께 제시해야 합니다.
-3. `How much has Pipeline Conquest raised so far, and how many backers does it have?`로 누락된 정보를 테스트합니다. 카탈로그에서 모금액이나 후원자를 추적하지 않으므로 명확히 답변을 거절한 다음 알고 있는 정보를 제공해야 합니다.
-4. `I need something for four players, about an hour long.`으로 다른 정보 범위를 테스트합니다. 플레이어 수와 플레이 시간을 알 수 없다고 설명한 뒤 다음 추천에 도움이 되는 후속 질문 하나를 해야 합니다.
-5. `Do you have Wingspan? If not, what's the closest thing you've got?`로 카탈로그에 없는 게임을 요구하는 상황을 테스트합니다. Wingspan이 카탈로그에 있다고 주장하거나 외부 지식으로 설명하지 않고 실제 Tailspin 게임으로 대화를 전환해야 합니다.
-6. `Recommend me something good.`으로 모호한 요청을 테스트합니다. 짧은 확인 질문 하나를 하고, 카테고리나 테마를 알기 전에는 추천하지 않아야 합니다.
-7. `What are your three highest rated games?`로 순위를 테스트합니다. Deployment Dynasty와 Script Strike가 5.0점, 그다음 Code Quest Odyssey가 4.8점으로 올바른 순서와 정확한 점수를 제시해야 합니다.
+2. `버그를 찾아내는 퍼즐 게임을 좋아합니다. 어떤 게임을 후원하면 좋을까요?`라고 요청해 그라운딩을 테스트합니다. 목록에 있는 실제 게임을 정확한 정보와 함께 제시해야 합니다.
+3. `Pipeline Conquest는 지금까지 모금액이 얼마이고 후원자는 몇 명인가요?`라고 요청해 누락된 정보를 테스트합니다. 카탈로그에서 모금액이나 후원자를 추적하지 않는다고 설명한 다음 알고 있는 정보를 제공해야 합니다.
+4. `플레이어 네 명이 할 수 있고 한 시간 정도 걸리는 게임이 필요합니다.`라고 요청해 다른 정보 범위를 테스트합니다. 플레이어 수와 플레이 시간을 알 수 없다고 설명한 뒤 다음 추천에 도움이 되는 후속 질문 하나를 해야 합니다.
+5. `Wingspan이 있나요? 없다면 가장 비슷한 게임은 무엇인가요?`라고 요청해 카탈로그에 없는 게임을 요구하는 상황을 테스트합니다. Wingspan이 카탈로그에 있다고 주장하거나 외부 지식으로 설명하지 않고 실제 Tailspin 게임으로 대화를 전환해야 합니다.
+6. `좋은 게임을 추천해 주세요.`라고 요청해 모호한 요청을 테스트합니다. 짧은 확인 질문 하나를 하고, 카테고리나 테마를 알기 전에는 추천하지 않아야 합니다.
+7. `평점이 가장 높은 게임 세 개는 무엇인가요?`라고 요청해 순위를 테스트합니다. Deployment Dynasty와 Script Strike가 5.0점, 그다음 Code Quest Odyssey가 4.8점으로 올바른 순서와 정확한 점수를 제시해야 합니다.
 8. 점검에 실패하면 Copilot과 실패한 답변 및 규칙을 논의하고, 구성이나 모델 선택을 조정한 뒤 점검을 반복하여 통과한 후 계속합니다.
 
 ## 완료 점검

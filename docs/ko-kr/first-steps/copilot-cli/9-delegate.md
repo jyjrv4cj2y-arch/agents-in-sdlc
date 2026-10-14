@@ -22,7 +22,7 @@ lastUpdated: 2026-10-05
 `/delegate`를 실행하고 다음 작업을 맡깁니다.
 
 ```plaintext
-Delegate this: add a shareable mission report to the space quiz. At the end of a run, generate a compact summary card with the score, a rank title based on the percentage, and the slowest question. Add a Copy result button that puts a short plain-text version on the clipboard. Keep it in the single index.html with no dependencies, keep it keyboard accessible, and report back with what changed.
+다음 작업을 위임합니다. Space Quiz에 공유 가능한 미션 보고서를 추가합니다. 퀴즈가 끝나면 점수, 백분율에 따른 등급 제목, 가장 오래 걸린 문제를 포함한 간결한 요약 카드를 생성합니다. 짧은 일반 텍스트 버전을 클립보드에 복사하는 Copy result 버튼을 추가합니다. 종속성 없이 단일 index.html에 구현하고 키보드 접근성을 유지하며 변경한 내용을 보고합니다.
 ```
 
 1. 위임한 작업이 실행되는 동안 기본 세션에서 계속 작업합니다.

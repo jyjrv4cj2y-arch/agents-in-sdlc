@@ -19,7 +19,7 @@ Space Quiz를 게시하여 이슈를 관리하고, 격리된 워크트리(Worktr
 다음 프롬프트를 보냅니다.
 
 ```plaintext
-Initialize this folder as a Git repository, create an initial commit, and create a new public GitHub repository named space-quiz in my account. Push the current branch and set it as the default branch. Refresh the project within this app so the GitHub project is linked.
+이 폴더를 Git 리포지토리로 초기화하고 첫 커밋을 만든 다음, 내 계정에 space-quiz라는 공개 GitHub 리포지토리를 만듭니다. 현재 브랜치를 푸시하고 기본 브랜치로 설정합니다. 이 앱에서 프로젝트를 새로 고쳐 GitHub 프로젝트와 연결합니다.
 ```
 
 > [!WARNING]

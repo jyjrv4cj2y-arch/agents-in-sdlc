@@ -51,7 +51,7 @@ lastUpdated: 2026-10-12
 통합 브라우저는 실제 브라우저이므로 에이전트가 퀴즈를 조작하고 동작을 검증할 수 있습니다. 다음 프롬프트를 보냅니다.
 
 ```plaintext
-Run a browser-level smoke test for the quiz in the integrated browser. Check keyboard navigation, score updates, correct and incorrect feedback, and the results screen. Fix any failures, then report what passed.
+통합 브라우저에서 퀴즈의 브라우저 수준 스모크 테스트를 실행합니다. 키보드 탐색, 점수 업데이트, 정답 및 오답 피드백, 결과 화면을 확인합니다. 실패 항목을 수정한 다음 통과한 항목을 보고합니다.
 ```
 
 1. 에이전트가 문제를 풀어 가는 동안 통합 브라우저를 지켜봅니다.

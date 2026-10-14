@@ -1,0 +1,106 @@
+---
+title: "演習 3 - カスタムエージェント"
+authors:
+  - geektrainer
+lastUpdated: 2026-06-30
+---
+
+## カスタムエージェントとは
+
+GitHub Copilot の[カスタムエージェント][custom-agents-concept]を使うと、開発ワークフローの特定のタスクや分野に特化した人工知能 (AI) アシスタントを作成できます。リポジトリの `.github/agents` フォルダーにある Markdown ファイルでエージェントを定義し、特定の作業をより効果的に実行できるよう、焦点を絞った指示、ベストプラクティス、コーディングパターン、分野固有の知識を Copilot に提供します。チームの専門知識を再利用可能なエージェントにまとめられます。たとえば、[Web Content Accessibility Guidelines (WCAG)][wcag] 準拠を徹底するアクセシビリティエージェント、安全なコーディングプラクティスに従うセキュリティエージェント、一貫したテストパターンを維持するテストエージェントなどです。
+
+カスタムエージェントは、プロジェクトの `.github/agents` フォルダーにある Markdown ファイル、またはグローバルな `~/.copilot/agents` にあるファイルで定義します。各ファイルには、少なくとも `name` と `description` を含む YAML frontmatter と、エージェントの動作、専門知識、指示を定義する Markdown プロンプトを記述します。
+
+### カスタムエージェントとエージェントスキルの違い
+
+カスタムエージェントと[エージェントスキル][agent-skills-concept]には、役割が一部重なるところがあります。どちらも主に Markdown ファイルで定義し、AI に作業方法を伝えます。最も簡単な区別は、**カスタムエージェントが作業者で、スキルがツール**であることです。
+
+カスタムエージェントは独自のコンテキストウィンドウを持ち、作業の一部としてスキルや別のエージェントを調整します。このラボのアクセシビリティ用カスタムエージェントは、アクセシビリティガイドラインに照らしてサイトをレビューし、更新します。その作業の一環として、プルリクエストのワークフロー用スキルやテストを実行して管理するスキルを呼び出すこともできます。
+
+> [!NOTE]
+> カスタムエージェントの作成に決まった正解はありません。AI のほかの活用方法と同様に、利用する環境やシナリオに合わせてテストと反復を行ってください。
+
+[custom-agents-concept]: https://docs.github.com/copilot/concepts/agents/cloud-agent/about-custom-agents
+[agent-skills-concept]: https://docs.github.com/copilot/concepts/agents/about-agent-skills
+[wcag]: https://www.w3.org/WAI/standards-guidelines/wcag/
+
+カスタムエージェントを使って、次のことを確認します。
+
+- カスタムエージェントの定義方法。
+- カスタムエージェントへのタスクの割り当て方。
+
+## シナリオ
+
+Tailspin Toys は、視覚的な能力や好みにかかわらず、すべてのユーザーがクラウドファンディング プラットフォームを使えるようにしたいと考えています。最近のユーザーフィードバックによると、テキストと背景のコントラストが不十分なため、現在のダークテーマが読みにくいという意見があります。このアクセシビリティ上の課題に対応するため、デザインチームはユーザーが切り替えられるハイコントラストモードを求めています。
+
+アクセシビリティは重要なため、できるだけ早く実装したいと考えています。カスタムエージェントを使って機能を生成します。
+
+## アクセシビリティ用カスタムエージェントを確認する
+
+アクセシビリティ用のカスタムエージェントは既に用意されています。内容を確認し、Copilot をどのようにガイドするかを理解します。
+
+Codespace に戻り、アクセシビリティ用カスタムエージェントのファイルを確認します。
+
+1. `.github/agents/accessibility.md` を開きます。
+2. `name` と `description` フィールドを含む YAML frontmatter を確認します。
+
+> [!CAUTION]
+> カスタムエージェントには `name` と `description` を含む frontmatter が必要です。
+
+3. 続くセクションを読み、次の内容を確認します。
+   - アクセシブルな Web サイトのコードを生成するときの主な責務。
+   - アクセシビリティのベストプラクティス。
+   - HTML、CSS、JavaScript のコード例。
+   - よくある落とし穴や誤り。
+
+## Issue を作成して割り当てる
+
+ミッション コントロールは、環境内のすべてのエージェントを操作する場所です。Copilot cloud agent にタスクを割り当て、進行状況を監視し、作業を方向付けたり追加のガイダンスを与えたりできます。まず、ハイコントラストモードの作成を Copilot に割り当てます。
+
+1. リポジトリに移動します。
+2. **Issues** タブを選択します。
+3. **New issue** を選択して新しい Issue のダイアログを開きます。
+4. **Blank issue** を選択して新しい Issue を作成します。
+5. **Title** に `Add high contrast mode to website` と入力します。
+6. **Description** に次の内容を入力します。
+
+   ```plaintext
+   We need a high contrast mode for the site. There should be a toggle for high contrast which the user can set. It should store the setting in local storage on the browser.
+   ```
+
+7. **Create** を選択して Issue を作成します。
+8. 右側の **Assign to Copilot** を選択して割り当てダイアログを開きます。
+9. 一覧から **Accessibility agent** を選択します。
+
+   ![cloud agent の割り当て画面で、カスタムエージェントと Accessibility が強調表示されているスクリーンショット](../../../_images/ex5-select-custom-agent.png)
+
+10. **Assign** を選択します。
+11. Copilot がバックグラウンドでタスクを開始します。
+
+## まとめと次のステップ
+
+GitHub Copilot の[カスタムエージェント][custom-agents]を確認しました。特定のタスクや分野に特化した AI アシスタントです。カスタムエージェントを使うと、チームの専門知識や標準を再利用可能なエージェントにまとめ、Copilot がより効果的に作業できるように導けます。
+
+次の概念を確認しました。
+
+- カスタムエージェントの定義方法。
+- カスタムエージェントへのタスクの割り当て方。
+
+Copilot がハイコントラストモードを実装している間に、次はミッション コントロールから[エージェントセッションを監視して方向付けます][next-lesson]。
+
+## リソース
+
+- [カスタムエージェントについて][custom-agents]
+- [組織でカスタムエージェントを使うための準備][org-custom-agents]
+- [エンタープライズでカスタムエージェントを使うための準備][enterprise-custom-agents]
+
+---
+
+| [← 前のレッスン: GitHub Copilot cloud agent][previous-lesson] | [次のレッスン: エージェントの監視と管理 →][next-lesson] |
+|:--|--:|
+
+[previous-lesson]: ../2-cloud-agent/
+[next-lesson]: ../4-managing-agents/
+[custom-agents]: https://docs.github.com/copilot/concepts/agents/cloud-agent/about-custom-agents
+[org-custom-agents]: https://docs.github.com/copilot/how-tos/administer-copilot/manage-for-organization/prepare-for-custom-agents
+[enterprise-custom-agents]: https://docs.github.com/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/prepare-for-custom-agents
